@@ -5,4 +5,6 @@ a=readtable('hour.csv');
 b=a;
 b(:,[2,15,16])=[];
 DatosBalanceados=table2array(b);
-save('datos.mat','DatosBalanceados');
+X=DatosBalanceados(:,(1:13));
+Y=DatosBalanceados(:,14);
+save('datos.mat');
